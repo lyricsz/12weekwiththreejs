@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>12 Week With ThreeJS by PJ DEV</title>
+    <link rel="stylesheet" href="style.css" />
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=7">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="ThreeJs, ThreeJs Tutorial, 12 Weeks Journey with ThreeJs, ThreeJs Journey, Discover ThreeJs">
     <meta name="author" content="PJ Dev">
+    <meta name="desription" content="Hello world! 12 weeks ThreeJS Journey by PJ DEV includes amazing ThreeJS web project... ">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <title>12 Week With ThreeJS by PJ DEV</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="maskable-icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
     <header>
@@ -34,30 +38,73 @@
             </nav>
         </aside>
         <h2 id="introduction">Introduction</h2>
-        <p></p>
+        <p>Hello world! Welcome to the official website of <strong>Lyricsz Games Store</strong>. Not really the homepage... 
+        Perhaps, you may love to <a href="">Check it out</a> :D. Twelve weeks with ThreeJs journey... What was that all about?</p>
+        <p>The <strong><em>ThreeJs Journey with PJ Dev</em></strong> is a 12 week journey... Where by PJ DEV is expected to learn the "<b>ThreeJs Library</b>" from scratch... Every week he is to create and release a full fledge projects (created using ThreeJS). Well, if that sounds fun to you, learn more in our <a href="#about">About section</a></p>
         
         <h2 id="thejourney">The Journey</h2>
-        <p></p>
-
+        <p>Whoo! Whoo!! Whoo!!! A week A project. How ambitious!!!</p>
+        <p>Hmm! So, ThreeJS is used for building 3d websites? Right? It's a library mainly used for that right? (More on this later). </p>
+        <p>Briefly, the journey is to help us all out in choosing our <strong>next library for building 3d websites</strong>. Every working days per week, PJ Dev is to learn ThreeJS atleast 6hours per day... And every week, let's see what can be built using what he's been taught!!! </p>
+        <p>Why should i care about all these? Perhaps the best reason is "<em>It let's you figure out whether ThreeJs does has the potential to be amazing for building 3d website or doesn't</em>". </p>
         <h2 id="about">About</h2>
-        <p></p>
+        <p>I bet we all've been looking forward for this section! The about section... :D </p>
+        <p>Alternatively to using ThreeJS to build 3d stuffs, one might use Babylon, Playcanvas, e.t.c but all these are libraries... that uses either 3d CSS, WebGPU, WebGL, WebGL2 as their underlying renderer. </p>
+        <p>Using/Learning pure 3d CSS, WebGL, WebGPU might be as daunting, difficult, cryptic... However we make use of libraries to make stuffs easier for us. No one wants to learn 3d Maths!!!</p>
+        <p>Libraries are code we make use of. (Other people's code) to further make our coding stuffs easier. They provide sets of API's, Functions e.t.c that does exactly what we're beeing told they would... So, shouldn't everybody be using libraries? Well, it does have it disadvantages... Alot of disadvantages! (just keep that in mind)</p>
+        <p>But there's BabylonJs, AFrame, Playcanvas... Why ThreeJs? Those are also 3d libraries! Well, you made a point, it's just BabylonJs, Playcanvas (list goes on) was never meant for creating 3d websites... That's where ThreeJS plays the role! </p>
 
         <h2 id="proscons">Pros and Cons</h2>
-        <p></p>
+        <p>
+            This section explains all about the <b>Advantages of following up</b> and <b>Disadvantages of following up</b>. 
+           
+            <section class="caption">
+                <caption>Advantages</caption>
+                <ol>
+                    <li>ThreeJS is best for building 3d website. </li>
+                    <li>This website will provide tutorials on how to create almost all the project our dear <b>PJ DEV</b> is going to create... So stay tuned :&rbrack;</li>
+                    <li>ThreeJS is very lightweight... and has fast renderers.</li>
+                    <li>In terms of web developers favourite library for building 3d stuffs, ThreeJS shine! :D </li>
+                </ol>
+            </section>
+            <section class="caption">
+                <caption>Disadvantages</caption>
+                <ol>
+                    <li>ThreeJS lacks Physics support, so stop thinking about building games using "just ThreeJS" (alternative approach include <strong>construct 2, Babylon e.t.c</strong>. </li>
+                    <li>Inconsistency... ThreeJS is being updated too frequently and this could cause some problems (bugs get attracted). </li>
+                    <li>ThreeJS relies on third party libraries for Psysics support (or your library)... and sometimes A won't be talking with B. Since A !== B. </li>
 
+                </ol>
+            </section>
+        </p>
+
+        <section id="timel">
+            <div id="">&CircleDot; <span id="time"></span></div>
+        </section>
     </main>
     <!-- Footer -->
     <footer>
         <nav>
             <ul>
-                <li>Home</li>
-                <li>Contact</li>
-                <li>About</li>
-                <li>Sitemap</li>
-                <li>Privacy Policy</li>
-                <li>&copy; 12 Weeks With ThreeJs by PJ DEV</li>
+                <li><a href="./">Home</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./sitemap.html">Sitemap</a></li>
+                <li><a href="./privacypolicy">Privacy Policy</a></li>
+                <br>
+                
             </ul>
+            &copy; 2024
         </nav>
     </footer>
+    <script>
+        let time = document.getElementById("time");
+        function timeNo(){
+            let timeNow = new Date();
+            time.innerHTML = timeNow;
+            requestAnimationFrame(timeNo)
+        }
+        window.onload = timeNo;
+    </script>
 </body>
 </html>

@@ -1,0 +1,119 @@
+*{
+    box-sizing: border-box;
+    image-rendering: pixelated;
+}
+
+body{
+    background-color: #232333;
+    margin: 0;
+}
+
+p, h1, h2, h3{
+    padding-left: 5px;
+}
+
+h1, h2, h3{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    color: #eee;
+    margin: 0;
+    padding: 8px;
+    text-shadow: 1px 1px 2px #eee;
+    letter-spacing: 2px;
+}
+
+h2, h3 {
+    margin-top: 10px;
+    border-bottom: 1px solid gray;
+    border-top: 1px solid white;
+}
+
+nav{
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+header ul, footer ul {
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    user-select: none;
+    list-style: none;
+}
+
+header ul li, footer ul li {
+    display: inline-block;
+    list-style: none;
+    width: 49%;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    border: none;
+    box-sizing: border-box;
+}
+
+ul li:hover, ul li a:hover{
+    color: red;
+}
+
+a{
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    color: gray;
+}
+
+
+header{
+    margin-bottom: 10px;
+    border-bottom: 10px ridge hsla(250, 19%, 17%, 10%);
+}
+
+footer{
+    border-top: 10px ridge hsla(250, 19%, 17%, 10%);
+    text-align: center;
+    color: #eee;
+}
+
+footer ul{
+    margin-bottom: 10px;
+}
+
+#timel{
+    background-color: transparent;
+    color: #eee;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 800;
+    text-shadow: 1px -1px 10px white;
+    margin-bottom: 10px;
+}
+
+a:hover{
+    color: #efe;
+}
+
+p{
+    text-indent: 24px;
+}
+
+p, ol, .caption{
+    font-family: Verdana, sans-serif;
+    color: #ddd;
+    text-align: left;
+}
+
+li {
+    font-family: Verdana, sans-serif;
+    padding-bottom: 5px;
+}
+
+.caption{
+    padding-left: 5px;
+}
+
+header ul li, footer ul li{
+    margin-bottom: 10px;
+}
