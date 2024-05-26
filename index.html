@@ -19,10 +19,10 @@
         <h1>12 Weeks With ThreeJs by PJ DEV</h1>
         <nav>
             <ul>
-                <li><a href="./">Home</a></li>
-                <li><a href="./tutorial.html">ThreeJS Tutorial</a></li>
-                <li><a href="./contact.html">Contact</a></li>
-                <li><a href="./about.html">About</a></li>
+                <li><a href="./" id="homeEl">Home</a></li>
+                <li><a href="./project" id="projectEl">ThreeJS Project</a></li>
+                <li><a href="./contact.html" id="contactEl">Contact</a></li>
+                <li><a href="./about.html" id="aboutEl">About</a></li>
             </ul>
         </nav>
     </header>
@@ -34,6 +34,7 @@
                     <li><a href="#thejourney">The Journey</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#proscons">Pros and Cons</a></li>
+                    <li><a href="#project">Project</a></li>
                 </ul>
             </nav>
         </aside>
@@ -72,11 +73,14 @@
                 <ol>
                     <li>ThreeJS lacks Physics support, so stop thinking about building games using "just ThreeJS" (alternative approach include <strong>construct 2, Babylon e.t.c</strong>. </li>
                     <li>Inconsistency... ThreeJS is being updated too frequently and this could cause some problems (bugs get attracted). </li>
-                    <li>ThreeJS relies on third party libraries for Psysics support (or your library)... and sometimes A won't be talking with B. Since A !== B. </li>
+                    <li>ThreeJS relies on third party libraries for Physics support (or your library)... and sometimes A won't be talking with B. Since A !== B. </li>
 
                 </ol>
             </section>
         </p>
+
+        <h2 id="project">Project</h2>
+        <p>Hello folks! To ensure simplicity, there's a seperate page for the <a href="">12 weeks project</a>. </p>
 
         <section id="timel">
             <div id="">&CircleDot; <span id="time"></span></div>
@@ -86,10 +90,11 @@
     <footer>
         <nav>
             <ul>
-                <li><a href="./">Home</a></li>
-                <li><a href="./contact.html">Contact</a></li>
-                <li><a href="./about.html">About</a></li>
-                <li><a href="./sitemap.html">Sitemap</a></li>
+                <li><a href="./" id="homeEl">Home</a></li>
+                <li><a href="./contact.html" id="contactEl">Contact</a></li>
+                <li><a href="./project" id="projectEl">ThreeJS Project</a></li>
+                <li><a href="./about.html" id="aboutEl">About</a></li>
+                <li><a href="./sitemap.html" id="sitemapEl">Sitemap</a></li>
                 <li><a href="./privacypolicy">Privacy Policy</a></li>
                 <br>
                 
@@ -105,6 +110,8 @@
             requestAnimationFrame(timeNo)
         }
         window.onload = timeNo;
+        let thePageNav = "homeEl";
     </script>
+    <script src="script/main.js"></script>
 </body>
 </html>

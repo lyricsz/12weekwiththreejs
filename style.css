@@ -99,7 +99,7 @@ p{
     text-indent: 24px;
 }
 
-p, ol, .caption{
+p, ol, .caption, fieldset{
     font-family: Verdana, sans-serif;
     color: #ddd;
     text-align: left;
@@ -116,4 +116,60 @@ li {
 
 header ul li, footer ul li{
     margin-bottom: 10px;
+}
+
+main form {
+    text-align: center;
+    width: 60%;
+    border: 1px solid gray;
+    outline: inset 1px white;
+    padding: 10px;
+    margin: 10px auto;
+    border-radius: 10px;
+    background-color: #232333;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 800;
+}
+
+main fieldset {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border-color: #232333;
+}
+
+main fieldset form label{
+    display: block;
+    width: 100%;
+    margin: 10px auto;
+    padding: 10px;
+}
+
+.inline {
+    display: inline-block;
+}
+
+
+main fieldset form .inline{
+    width: auto;
+}
+
+textarea{
+    vertical-align: top;
+}
+
+textarea, input{
+    width:fit-content;
+    border: none !important;
+    border-bottom: 6px ridge #232333 !important;
+    border-radius: 3px 1px 1px 0px !important;
+    max-width: 300px !important;
+    max-height: 50px !important;
+    background-color: transparent !important;
+    caret-color: red !important;
+    accent-color: red !important;
+    color: #eee !important;
+    outline: none !important;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 800;
 }

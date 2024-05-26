@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>12 Week With ThreeJS by PJ DEV</title>
+    <link rel="stylesheet" href="../style.css" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="ThreeJs, ThreeJs Tutorial, 12 Weeks Journey with ThreeJs, ThreeJs Journey, Discover ThreeJs">
+    <meta name="author" content="PJ Dev">
+    <meta name="desription" content="Hello world! 12 weeks ThreeJS Journey by PJ DEV includes amazing ThreeJS web project... ">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="maskable-icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <h1>12 Weeks With ThreeJs by PJ DEV: <br>Project's Page </h1>
+        <nav>
+            <ul>
+                <li><a href="../"  id="homeEl">Home</a></li>
+                <li><a href="./" id="projectEl">ThreeJS Project</a></li>
+                <li><a href="./contact.html" id="contactEl">Contact</a></li>
+                <li><a href="./about.html" id="aboutEl">About</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <aside>
+            <nav>
+                <ul>
+                    <li><a href="#introduction">Introduction</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <h2 id="introduction">Introduction</h2>
+        <p>Hello folks, all the ThreeJS project will be uploaded here with their corresponding demo and tutorial! The tutorial is to guide us through how 
+        'this and that' is created using ThreeJS. I hope you guys have fun with it!
+        </p>
+        <p>But before we dive-deep in, i assume anyone following the tutorials has a basic knowledge of <strong><em>HTML4+, CSS3, JavaScript (ES6+).</em></strong></p>
+        <p>Without any further-a-do, let the fun begins!!!</p>
+        
+        <h2  id="projects">Projects</h2>
+        <p>Below are the listed project(per week) :D. 
+        <section>
+            <ol>
+                <caption>Week 1</caption>
+                <li>
+                    <dl>
+                        <dt>Bounce the Shadow</dt>
+                        <dd>A simple bouncing ball game. The ball shadows is the main target... Aiming it to the walls increase our score...
+                        <b>You can learn about how it was created </b>, if you wanted to... Have fun checking the <a href="./project1.html">Demo</a></dd>
+                    </dl>
+                </li>
+            </ol>
+            <ol>
+                <caption>Week 2</caption>
+                <li>
+                    <dl>
+                        <dt>Bounce the Shadow</dt>
+                        <dd></dd>
+                    </dl>
+                </li>
+            </ol>
+        </section>
+        </p>
+        <section id="timel">
+            <div id="">&CircleDot; <span id="time"></span></div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="./" id="homeEl">Home</a></li>
+                <li><a href="./contact.html" id="contactEl">Contact</a></li>
+                <li><a href="./project" id="projectEl">ThreeJS Project</a></li>
+                <li><a href="./about.html" id="aboutEl">About</a></li>
+                <li><a href="./sitemap.html" id="sitemapEl">Sitemap</a></li>
+                <li><a href="./privacypolicy">Privacy Policy</a></li>
+                <br>
+                
+            </ul>
+            &copy; 2024
+        </nav>
+    </footer>
+    <script>
+        let time = document.getElementById("time");
+        function timeNo(){
+            let timeNow = new Date();
+            time.innerHTML = timeNow;
+            requestAnimationFrame(timeNo)
+        }
+        window.onload = timeNo;
+        let thePageNav = "projectEl";
+    </script>
+    <script src="../script/main.js"></script>
+</body>
+</html>

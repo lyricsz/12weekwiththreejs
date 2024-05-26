@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>12 Week With ThreeJS by PJ DEV</title>
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="ThreeJs, ThreeJs Tutorial, 12 Weeks Journey with ThreeJs, ThreeJs Journey, Discover ThreeJs">
+    <meta name="author" content="PJ Dev">
+    <meta name="desription" content="Hello world! 12 weeks ThreeJS Journey by PJ DEV includes amazing ThreeJS web project... ">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="maskable-icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <h1>12 Weeks With ThreeJs by PJ DEV</h1>
+        <nav>
+            <ul>
+                <li><a href="./">Home</a></li>
+                <li><a href="./project">ThreeJS Project</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+                <li><a href="./about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Contacts</h2>
+        <p>Hello wolrd! Welcome to the contact page. Just in case you want to feel in touch then kindly contact us. </p>
+        <p>If you need any of our help, want to render an assistance , or a partnership, or whatever you might want to contact us on, <i><mark>Feel free to contact us, folks.</mark></i></p>
+        <p>Use below form to contact us, also we'll be grateful if you subscribe to our monthly newsletter: </p>
+        <fieldset>
+            <legend>Contact Us</legend>
+            <section>
+                <form>
+                    <label>
+                        Name: <input type="text" id="text" placeholder="John Doe" required />
+                    </label>
+                    <label>
+                        Website: <input type="text" id="website" placeholder="https://www.johndoe.com" required />
+                    </label>
+                    <label>
+                        Mail: <input type="email" id="mail" placeholder="johndoe@gmail.com" required />
+                    </label>
+                    <label>
+                        Gender:
+                        <label class="inline "><input type="radio" name="gender" value="Male" > Male </label>
+                        <label class="inline "> <input type="radio" name="gender" value="Female" > Female </label>
+                    </label>
+                    <label>
+                        Message: <textarea name="itext" id="message" required> </textarea>
+                    </label>
+                    <input type="submit" value="Submit" />
+                    <input type="reset" value="Reset" />
+                </form>
+            </section>
+        </fieldset>
+
+        <section id="timel">
+            <div id="">&CircleDot; <span id="time"></span></div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="./">Home</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+                <li><a href="./project">ThreeJS Project</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./sitemap.html">Sitemap</a></li>
+                <li><a href="./privacypolicy">Privacy Policy</a></li>
+                <br>
+                
+            </ul>
+            &copy; 2024
+        </nav>
+    </footer>
+    <script>
+        let time = document.getElementById("time");
+        function timeNo(){
+            let timeNow = new Date();
+            time.innerHTML = timeNow;
+            requestAnimationFrame(timeNo)
+        }
+        window.onload = timeNo;
+    </script>
+    <script src="script/main.js"></script>
+</body>
+</html>
