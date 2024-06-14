@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>12 Week With ThreeJS by PJ DEV</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="ThreeJs, ThreeJs Tutorial, 12 Weeks Journey with ThreeJs, ThreeJs Journey, Discover ThreeJs">
+    <meta name="author" content="PJ Dev">
+    <meta name="desription" content="Hello world! 12 weeks ThreeJS Journey by PJ DEV includes amazing ThreeJS web project... ">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="maskable-icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div id="heart"></div>
+    <header>
+        <h1>12 Weeks With ThreeJs by PJ DEV: <br>Project's Page </h1>
+        <nav>
+            <ul>
+                <li><a href="../"  id="homeEl">Home</a></li>
+                <li><a href="./" id="projectEl">ThreeJS Project</a></li>
+                <li><a href="./../contact.html" id="contactEl">Contact</a></li>
+                <li><a href="./../about.html" id="aboutEl">About</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <aside>
+            <nav>
+                <ul>
+                    <li><a href="#introduction">Introduction</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <h2 id="introduction">Introduction</h2>
+        <p>Hello, and welcome to the first threejs tutorial... Well, let the learning begins!!!</p>
+        <h3>What is ThreeJS? </h3>
+        <p>ThreeJS is a lightweight JavaScript library used to create 3d content on the web. Creating 3d website would've been daunting if a developer
+        did not make use of a library. To create 3d content on the web , one need to learn alot (3d web, how to use webgpu, e.t.c). 
+        </p>
+        <p>ThreeJs is a library that provides us API's that makes creating 3d content alot easier. (It's also going to help if you know some 3d maths, webgl / webgpu). 
+        </p>
+        <p>So, in short: <q>ThreeJs is a library used to build 3d websites. </q></p>
+        <h3>Short intro to our project</h3>
+        <p>The project we're going to be building in this tutorial is a basic project that makes use of almost everything you're gonna need to build a 3d website. </p>
+        <p>let's get started...</p>
+        <h3>Scene, Camera, Renderer</h3>
+        <p>In ThreeJS world... We need a scene, a camera, and a renderer to get anything 3d out of ThreeJs (or anything else). But what is a scene? What is a camera? A renderer? </p>
+        <p>A scene in ThreeJS is a basic view of where your object stays... It's like a container where you put all your 3d object (so without a scene, there's no place to put our 3d object). </p>
+        <p>A camera is what we use to picture our scene. We can only view our 3d world if there's a camera... To simplify it, the camera is like the user's eye. What the camera pictures is the only thing our user can see. ThreeJS provides 
+        two types of camera. An orthogrgaphic camera (for 2d and 2.5d stuffs) and Perspective camera (for 3d stuffs). 
+        </p>
+        <p>And finally, a renderer renders both the scene (where our object stays) and the camera (our view) to an HTML5 Canvas Element. ThreeJs provides a default canvas's element, or we can manually specify the canvas to be used. (This will make sense as we progress). </p>
+        <h3>Let's get started</h3>
+        <p>Whoopie! First of all, congrats for making it this far :D. I assume by now , we've opened our favourite text editor. 
+            <ol>
+                <li id="step1">Create a new folder, name it anything you'll remember quick. (e.g My First Threejs Project). </li>
+                <li>Create a new file in your preferred folder... Name it index with the <small>.html</small> file extension. So the file name(with extension) will be "index.html". </li>
+                <li>Create a sub-folder named "lib". All our library folders will be here. Download and unzipped the ThreeJs zipped file. (I'm using version r150 for this project...). </li>
+                <li>Checked the unzipped file, search for three.module.js or three.module.min.js. Alternatively, navigate through : threejs-@version >> build >> three.module.js . </li>
+                <li>You might notice we're using the module file, instead of other files in the build folder. That's because as of version r150 or so, the ".js" file is depreciated and greatly not recommend... If you're wondering what files are those in the "build folder" that's threejs main file. (we'll need to use one of these files for our project). </li>
+                <li>Copy the "three.module.js" file to the "lib" folder of our main project. <span id="check001"> (Check step 1). </span> </li>
+                <li>Copy the following code to the index.html file:
+                    <fieldset>
+                        <div style="display: flex; padding: 4px; flex-direction: row-reverse;" class="copy" text="">
+                            <button >Copy</button>
+                        </div>
+                        <code>
+                            &lt;!DOCTYPE html&gt;<br>
+                            &lt;html lang="en"&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;head&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt; ThreeJS Project &lt;/title&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/head&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;body&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;script src="js/app.js" type="module" &gt;&lt;/script&gt;<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/body&gt;<br>
+                            &lt;/html&gt; <br>
+                        </code>
+                    </fieldset>
+                </li>
+                <li>Create another sub-folder in our main project folder. Name it "js"... In the new js folder, create a new file, name it "app.js" (This is where our main program code will go). Type in the following code to the app.js file:
+                    <fieldset>
+                        <code>
+                            import * as THREE from "lib/three.module.js";
+                            <br>
+                            console.log(THREE);
+                        </code>    
+                    </fieldset>    
+                </li>
+                <li>Here, we are using Es6 module (note the <small>type="module"</small> in our script tag in index.html)... If you don't know much about it, you can <a href=""> learn it here </a> and come back once you've grasp it. Run the index.html with any web server that you love using... (some editors come with web servers. e.g live server for vs code). </li>
+                <li>Navigate to the console tab manually or press "f12" (On chrome, I love using it and i greatlt recommend it). </li>
+                <li>You should see something like the image below: (But certainly not an error) 
+                    <img  src="assets/img1.png" alt="ThreeJS is logged into the console" title="Click the image to zoom! And click it again to exit Zoom."/>
+                </li>
+                
+            </ol>
+        </p>
+        <section id="timel">
+            <div id="">&CircleDot; <span id="time"></span></div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="../" id="homeEl">Home</a></li>
+                <li><a href="./../contact.html" id="contactEl">Contact</a></li>
+                <li><a href="./../project" id="projectEl">ThreeJS Project</a></li>
+                <li><a href="./../about.html" id="aboutEl">About</a></li>
+                <li><a href="./../sitemap.html" id="sitemapEl">Sitemap</a></li>
+                <li><a href="./../privacypolicy">Privacy Policy</a></li>
+                <br>
+                
+            </ul>
+            &copy; 2024
+        </nav>
+    </footer>
+    <script>
+        let time = document.getElementById("time");
+        function timeNo(){
+            let timeNow = new Date();
+            time.innerHTML = timeNow;
+            requestAnimationFrame(timeNo)
+        }
+        window.onload = timeNo;
+        let thePageNav = "projectEl";
+    </script>
+    <script src="../script/main.js"></script>
+    <script src="script/tutorial.js"></script>
+</body>
+</html>
